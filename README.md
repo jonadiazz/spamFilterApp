@@ -8,7 +8,7 @@
  - [tkinter/optionmenu](http://effbot.org/tkinterbook/optionmenu.htm)
  - [mail-archive/TkListbox](https://www.mail-archive.com/python-list@python.org/msg23753.html)
  - [github/metachris/py2app](https://github.com/metachris/py2app)
- - [](http://www.tutorialspoint.com/python/tk_message.htm)
+ - [tutorialspoint/Tk](http://www.tutorialspoint.com/python/tk_message.htm)
  - [metachris/py2app/tutorial](https://www.metachris.com/2015/11/create-standalone-mac-os-x-applications-with-python-and-py2app/)
  - [wikipedia/feature_hashing](https://en.wikipedia.org/wiki/Feature_hashing)
  - [wikipedia/bag-of-words](https://en.wikipedia.org/wiki/Bag-of-words_model)
