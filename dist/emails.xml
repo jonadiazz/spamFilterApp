@@ -1,0 +1,14 @@
+<?xml version= "1.0"?>
+
+<EMAILS>
+        <email>
+            <message>
+                This is first email and is not a spam!!!
+            </message>
+        </email>
+        <email>
+            <message>
+                This is 2nd email and is in fact is BUY BUY BUY!!!
+            </message>
+        </email>
+</EMAILS>

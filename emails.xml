@@ -1,0 +1,53 @@
+<?xml version= "1.0"?>
+
+<EMAILS>
+    <email id="em1">
+        <from>
+            uno@email.com
+        </from>
+        <message>
+            This is first email and is not a spam!!!
+        </message>
+    </email>
+    <email id="em2">
+        <from>
+            dos@email.com
+        </from>
+        <message>
+            This is 2nd email and is in fact is BUY BUY BUY!!!
+        </message>
+    </email>
+    <email id="em3">
+        <from>
+            ast@email.com
+        </from>
+        <message>
+            This is 3rd email and is not a spam!!!
+        </message>
+    </email>
+    <email id="em4">
+        <from>
+            pos@email.com
+        </from>
+        <message>
+            This is 4th email and is in fact is BUY BUY BUY!!!
+        </message>
+    </email>
+    <email id="em5">
+        <from>
+            monet@email.com
+        </from>
+        <message>
+            This is 5th email and is not a spam!!!
+        </message>
+    </email>
+    <email id="em6">
+        <from>
+            time@email.com
+        </from>
+        <message>
+            This is 6th email and is in fact is BUY BUY BUY!!!
+        </message>
+    </email>
+
+</EMAILS>
