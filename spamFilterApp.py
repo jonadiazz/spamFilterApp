@@ -5,15 +5,9 @@ from xml.dom import minidom
 xmldoc = minidom.parse('/Users/drifter/Desktop/spamFilterApp/emails.xml')
 emails = xmldoc.getElementsByTagName('email')
 
-#xmldoc2 = minidom.parse('/Users/drifter/Desktop/spamFilterApp/bag-of-words.xml')
-#BOW = xmldoc.getElementsByTagName('BOW')
-
 f = open('/Users/drifter/Desktop/spamFilterApp/BOWBad.txt', 'r+')
 content = f.readlines()
 words = [c.strip() for c in content]
-
-#def getElement(self, element):
-#    return self.getText(element.childNodes)
 
 def getText(nodelist):
     rc = []
@@ -43,8 +37,8 @@ for a in range(len(fromsObjs)):
 def MARK(message):
     for word in words:
         if word in message:
-            return "\n" + "SPAM"
-    return "\n" + "HAM"
+            return " :SPAM"
+    return " :HAM"
 
 
 def callback(*event):
