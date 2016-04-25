@@ -5,10 +5,12 @@ from xml.dom import minidom
 xmldoc = minidom.parse('/Users/drifter/Desktop/spamFilterApp/emails.xml')
 emails = xmldoc.getElementsByTagName('email')
 
-xmldoc2 = minidom.parse('/Users/drifter/Desktop/spamFilterApp/bag-of-words.xml')
-BOW = xmldoc.getElementsByTagName('BOW')
+#xmldoc2 = minidom.parse('/Users/drifter/Desktop/spamFilterApp/bag-of-words.xml')
+#BOW = xmldoc.getElementsByTagName('BOW')
 
-file = open('/Users/drifter/Desktop/spamFilterApp/BOWGood.txt', 'r+')
+f = open('/Users/drifter/Desktop/spamFilterApp/BOWBad.txt', 'r+')
+content = f.readlines()
+words = [c.strip() for c in content]
 
 #def getElement(self, element):
 #    return self.getText(element.childNodes)
@@ -39,6 +41,10 @@ for a in range(len(fromsObjs)):
         messages.append(node.data)
 
 def MARK(message):
+    for word in words:
+        if word in message:
+            return "\n" + "SPAM"
+    return "\n" + "HAM"
 
 
 def callback(*event):
@@ -63,7 +69,7 @@ mylist.pack( side = LEFT, fill = BOTH )
 scrollbar.config( command = mylist.yview )
 
 var = StringVar()
-label = Message( root, textvariable=var, width=600)
+label = Message( root, textvariable=var, width=900)
 label.pack()
 
 mylist.bind("<<ListboxSelect>>", callback)
