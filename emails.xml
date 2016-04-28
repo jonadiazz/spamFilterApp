@@ -6,7 +6,7 @@
             uno@email.com
         </from>
         <message>
-            This is first email and is not a spam!!!
+            Greetings, This is first email and is not a spam
         </message>
     </email>
     <email id="em2">
@@ -14,7 +14,7 @@
             dos@email.com
         </from>
         <message>
-            This is 2nd email and is in fact is BUY BUY BUY!!!
+            Sincerily, This is 2nd email and is in fact is BUY BUY BUY _
         </message>
     </email>
     <email id="em3">
@@ -22,7 +22,7 @@
             ast@email.com
         </from>
         <message>
-            This is 3rd email and is not a spam!!!
+            This is 3rd email and is not a spam
         </message>
     </email>
     <email id="em4">
@@ -30,7 +30,7 @@
             pos@email.com
         </from>
         <message>
-            This is 4th email and is in fact is BUY BUY BUY!!!
+            This is 4th email and is in fact is BUY BUY BUY
         </message>
     </email>
     <email id="em5">
@@ -38,7 +38,7 @@
             monet@email.com
         </from>
         <message>
-            This is 5th email and is not a spam!!!
+            News, This is 5th email and is not a spam
         </message>
     </email>
     <email id="em6">
@@ -46,7 +46,7 @@
             time@email.com
         </from>
         <message>
-            This is 6th email and is in fact is BUY BUY BUY!!!
+            This is 6th email and is in fact is BUY BUY BUY
         </message>
     </email>
 

@@ -1,19 +1,28 @@
 import sys
 from Tkinter import *
 from xml.dom import minidom
+from collections import Counter
+import re
+
+
 
 xmldoc = minidom.parse('/Users/drifter/Desktop/spamFilterApp/emails.xml')
 emails = xmldoc.getElementsByTagName('email')
 
 f = open('/Users/drifter/Desktop/spamFilterApp/BOWBad.txt', 'r+')
-content = f.readlines()
-words = [c.strip() for c in content]
+f2 = open('/Users/drifter/Desktop/spamFilterApp/BOWGood.txt', 'r+')
 
-def getText(nodelist):
-    rc = []
-    for node in nodelist:
-        rc.append(node.childNodes[0].nodeValue)
-    return rc
+content = f.readlines()
+content2 = f2.readlines()
+
+spamWords = [c.strip() for c in content]
+hamWords = [c.strip() for c in content2]
+
+#def getText(nodelist):
+#    rc = []
+#    for node in nodelist:
+#        rc.append(node.childNodes[0].nodeValue)
+#    return rc
 
 fromsObjs = []
 messageObjs = []
@@ -34,10 +43,27 @@ for a in range(len(fromsObjs)):
     for node in nodesMessages:
         messages.append(node.data)
 
+#def getwordbins(words, msg):
+#    cnt = Counter()
+#    for word in words:
+#        cnt[word] = cnt[word] + 1
+#    return cnt
+
 def MARK(message):
-    for word in words:
-        if word in message:
-            return " :SPAM"
+    ham = 0
+    spam = 0
+    ocurrences = message.split()
+
+    for wurd in spamWords:
+        if wurd in ocurrences:
+            spam = spam + ocurrences.count(wurd)
+
+    for word in hamWords:
+        if word in ocurrences:
+            ham = ham + ocurrences.count(word)
+
+    if spam > ham:
+        return " :SPAM"
     return " :HAM"
 
 
